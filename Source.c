@@ -6,13 +6,13 @@
 FILE* v()                                              //V
 {
 	FILE* f;
-	char c, b[100];
+	char nacitanyZnak, b[100];
 	if ((f = fopen("autobazar.txt", "r")) == NULL)
 		printf("subor sa nepodarilo otvorit. \n");
-	while ((c = getc(f)) != EOF)
+	while ((nacitanyZnak = getc(f)) != EOF)
 	{
 		printf("meno priezvisko: ");
-		printf("%c%s", c, fgets(b, 100, f));
+		printf("%c%s", nacitanyZnak, fgets(b, 100, f));
 		printf("SPZ: ");
 		printf("%s", fgets(b, 100, f));
 		printf("typ auta: ");
